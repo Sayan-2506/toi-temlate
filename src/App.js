@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Front } from "./components";
+import Info from "./components/Info";
+import Program from "./components/Program";
+import DresCode from "./components/DresCode";
+import Countdown from "./components/countdown/Countdown";
+import Form from "./components/Form";
+import PartyImage from "./components/PartyImage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Front />
+      <Info />
+      <Program />
+      <DresCode />
+      <Countdown timeTillDate="05 27 2023, 8:00 p" timeFormat="MM DD YYYY, h:mm p" />
+      <Form />
+      <PartyImage />
     </div>
   );
 }
