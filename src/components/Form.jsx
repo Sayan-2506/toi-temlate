@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { motion } from "framer-motion";
+import { Context } from '../index';
+import { message } from "antd";
+import Spinner from "./Spinner";
+
 
 const Form = () => {
+  const [name, setName] = useState("");
+  const [selectedOption, setSelectedOption] = useState('');
+  const { store } = useContext(Context);
+  const [loading, setLoading] = useState(false);
+
+  const success = () => {
+    message.success('Рахмет!');
+  };
+
+  const error = () => {
+    message.error('Осындай есіммен қонақ бар!');
+  };
+
+
   const textAnimation = {
     hidden: {
       x: -100,
@@ -13,6 +31,30 @@ const Form = () => {
       transition: { delay: custom * 0.3 },
     }),
   };
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+
+  const sendData = (event) => {
+    event.preventDefault();
+    let data = new FormData();
+    if(name && selectedOption) {
+        data.append('name', name);
+        data.append(selectedOption, true);
+        setLoading(true);
+        store.ComePeople({name: data.get('name'), [selectedOption]: true})
+        .then((result) => {
+          setLoading(false);
+          if (result?.error) {
+            error();
+          } else if (result?.success) {
+            success();
+          }
+        })
+    }
+  }
 
   return (
     <motion.div
@@ -28,12 +70,15 @@ const Form = () => {
       >
         Тойға келесіз бе?
       </motion.h3>
-      <form>
+      {loading && <Spinner />}
+      <form onSubmit={sendData}>
         <div className="relative z-0 w-full mb-6 group">
           <input
             type="text"
             name="floating_name"
             id="floating_name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
@@ -53,9 +98,11 @@ const Form = () => {
               id="country-option-1"
               type="radio"
               name="countries"
-              value="USA"
               className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
-              checked
+              value="coming"
+              checked={selectedOption === 'coming'}
+              onChange={handleOptionChange}
+              required
             />
             <motion.label
               custom={1}
@@ -74,8 +121,11 @@ const Form = () => {
               id="country-option-2"
               type="radio"
               name="countries"
-              value="Germany"
               className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"
+              value="spouse"
+              checked={selectedOption === 'spouse'}
+              onChange={handleOptionChange}
+              required
             />
             <motion.label
               custom={2}
@@ -94,8 +144,11 @@ const Form = () => {
               id="country-option-3"
               type="radio"
               name="countries"
-              value="Spain"
               className="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600"
+              value="I_cant_come"
+              checked={selectedOption === 'I_cant_come'}
+              onChange={handleOptionChange}
+              required
             />
             <motion.label
               custom={3}

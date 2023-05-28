@@ -1,4 +1,6 @@
-import React from "react";
+import { React, useContext, useEffect } from "react";
+import { observer } from "mobx-react-lite";
+import { Context } from "./index";
 import "./App.css";
 import { Front } from "./components";
 import Info from "./components/Info";
@@ -9,6 +11,14 @@ import Form from "./components/Form";
 import PartyImage from "./components/PartyImage";
 
 function App() {
+  const { store } = useContext(Context);
+
+  useEffect(() => {
+    if (localStorage.getItem("accessToken")) {
+      store.checkAuth();
+    }
+  }, []);
+
   return (
     <div className="App">
       <Front />
@@ -22,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default observer(App);
