@@ -57,7 +57,7 @@ const Front = () => {
           {isPlaying ? (
             <img className="relative z-10 left-[-20%]" src={pause} alt="pauseImg" />
           ) : (
-            <img className="relative z-10" src={play} alt="playImg" />
+            <img className="relative z-10 left-[-20%]" src={play} alt="playImg" />
           )}
         </button>
       <div className="w-full max-w-[600px] m-auto h-full flex flex-col text-center text-slate-700 px-4 mt-12">
