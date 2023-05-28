@@ -76,7 +76,7 @@ const Front = () => {
           custom={2}
           variants={textAnimation}
         >
-          Дамир мен Назымның
+          Манарбек пен Ақмарал
         </motion.h2>
         <motion.p
           className="font-medium text-base uppercase"

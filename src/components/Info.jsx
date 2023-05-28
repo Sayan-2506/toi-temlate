@@ -40,27 +40,27 @@ const Info = () => {
         variants={textAnimation}
         className="text-xl text-yellow-600 uppercase mb-5 font-[Pacifico]"
       >
-        Сырымбек-Жамал
+        Қантбала және бауырлары
       </motion.h2>
       <motion.h2
         custom={2}
         variants={textAnimation}
         className="text-xl text-yellow-600 uppercase font-[Pacifico]"
       >
-        08.03.2023
+        05.07.2023
       </motion.h2>
-      <h3 className="text-base uppercase mb-5">Сағат 18.00 де</h3>
+      <h3 className="text-base uppercase mb-5">Сағат 19:00 де</h3>
       <motion.h2
         custom={3}
         variants={textAnimation}
         className="text-xl font-semibold text-yellow-600 uppercase"
       >
-        Double bb тойханасы
+        NurHall тойханасы
       </motion.h2>
-      <h3 className="text-base uppercase">Қызылорда қ, Абылай Айдосова, 42а</h3>
+      <h3 className="text-base uppercase">Обаган 2a</h3>
       <div className="flex items-center justify-center gap-4 mt-5">
         <a
-          href="https://www.instagram.com/mr_robot_usa/"
+          href="https://www.instagram.com/nurhall.nursultan/"
           target="_blank"
           without
           rel="noreferrer"
@@ -75,7 +75,7 @@ const Info = () => {
         </a>
 
         <a
-          href="https://2gis.kz/astana/directions/points/%7C71.419298%2C51.144849%3B70000001050750737?m=71.419309%2C51.144843%2F18"
+          href="https://2gis.kz/astana/directions/points/%7C71.509973%2C51.140567%3B70000001047854220"
           target="_blank"
           without
           rel="noreferrer"

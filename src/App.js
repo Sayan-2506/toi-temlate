@@ -23,9 +23,7 @@ function App() {
     <div className="App">
       <Front />
       <Info />
-      <Program />
-      <DresCode />
-      <Countdown timeTillDate="05 27 2023, 8:00 p" timeFormat="MM DD YYYY, h:mm p" />
+      <Countdown timeTillDate="07 26 2023, 7:00 p" timeFormat="MM DD YYYY, h:mm p" />
       <Form />
       <PartyImage />
     </div>
