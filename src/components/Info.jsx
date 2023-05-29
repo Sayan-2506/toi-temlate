@@ -55,7 +55,7 @@ const Info = () => {
         variants={textAnimation}
         className="text-xl font-semibold text-yellow-600 uppercase"
       >
-        NurHall тойханасы
+        NurHall restaurant
       </motion.h2>
       <h3 className="text-base uppercase">Обаган 2a</h3>
       <div className="flex items-center justify-center gap-4 mt-5">
