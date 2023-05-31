@@ -67,7 +67,7 @@ class Countdown extends React.Component {
         <motion.h3
           custom={1}
           variants={textAnimation}
-          className="text-lg font-medium mb-6"
+          className="text-base font-medium mb-6"
         >
           Тойдың басталуына:
         </motion.h3>

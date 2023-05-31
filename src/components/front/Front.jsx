@@ -79,29 +79,29 @@ const Front = () => {
       </button>
       <div className="w-full max-w-[600px] m-auto h-full flex flex-col text-center text-slate-700 px-4 mt-12">
         <motion.h1
-          className="font-medium text-lg uppercase"
+          className="font-medium text-base"
           custom={1}
           variants={textAnimation}
         >
           Құрметті ағайын-туыс, құда-жекжат, дос-жарандар!
         </motion.h1>
-        <h2 className="font-medium text-base my-5 uppercase">
+        <h2 className="font-medium text-xs my-5">
           Сіздерді ұлымыз бен келініміз
         </h2>
         <motion.h2
-          className="text-2xl text-yellow-600 mb-8 font-vivaldi"
+          className="text-3xl text-yellow-600 mb-8 font-vivaldi"
           custom={2}
           variants={textAnimation}
         >
           Манарбек пен Ақмарал
         </motion.h2>
         <motion.p
-          className="font-medium text-base uppercase"
+          className="font-medium text-xs max-w-[280px] m-auto"
           custom={3}
           variants={textAnimation}
         >
           Шаңырақ көтеру тойына арналған салтанатты ақ дастарханымыздың қадірлі
-          қонағы болуынызға шақырамыз
+          қонағы болуға шақырамыз
         </motion.p>
       </div>
     </motion.div>

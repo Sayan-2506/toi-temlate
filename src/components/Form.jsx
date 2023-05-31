@@ -66,7 +66,7 @@ const Form = () => {
       <motion.h3
         custom={1}
         variants={textAnimation}
-        className="text-lg text-center font-medium mb-6"
+        className="text-base text-center font-medium mb-6"
       >
         Тойға келесіз бе?
       </motion.h3>
