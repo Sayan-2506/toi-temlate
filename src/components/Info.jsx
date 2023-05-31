@@ -38,22 +38,22 @@ const Info = () => {
       <motion.h2
         custom={1}
         variants={textAnimation}
-        className="text-xl text-yellow-600 uppercase mb-5 font-[Pacifico]"
+        className="text-2xl text-yellow-600 mb-5 font-vivaldi"
       >
         Қантбала және бауырлары
       </motion.h2>
       <motion.h2
         custom={2}
         variants={textAnimation}
-        className="text-xl text-yellow-600 uppercase font-[Pacifico]"
+        className="text-2xl text-yellow-600 font-snell"
       >
         05.07.2023
       </motion.h2>
-      <h3 className="text-base uppercase mb-5">Сағат 19:00 де</h3>
+      <h3 className="text-base uppercase mb-5">Сағат 17:00 де</h3>
       <motion.h2
         custom={3}
         variants={textAnimation}
-        className="text-xl font-semibold text-yellow-600 uppercase"
+        className="text-2xl text-yellow-600 font-snell"
       >
         NurHall restaurant
       </motion.h2>

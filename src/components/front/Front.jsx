@@ -5,7 +5,7 @@ import frontart from "../../assets/art1.jpg";
 import frontvideo from "../../assets/front-video.mp4";
 import play from "../../assets/play.svg";
 import pause from "../../assets/pause.svg";
-import sound from "../../assets/music.m4a";
+import sound from "../../assets/music2.mp4";
 
 const Front = () => {
   const textAnimation = {
@@ -89,7 +89,7 @@ const Front = () => {
           Сіздерді ұлымыз бен келініміз
         </h2>
         <motion.h2
-          className="text-xl text-yellow-600 mb-8 font-[Pacifico] uppercase"
+          className="text-2xl text-yellow-600 mb-8 font-vivaldi"
           custom={2}
           variants={textAnimation}
         >
