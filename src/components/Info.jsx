@@ -38,7 +38,7 @@ const Info = () => {
       <motion.h2
         custom={1}
         variants={textAnimation}
-        className="text-2xl text-yellow-600 mb-5 font-vivaldi"
+        className="text-xl text-yellow-600 mb-5 font-vivaldi"
       >
         Қантбала және бауырлары
       </motion.h2>
